@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>operators example</title>
+    </head>
+    <body>
+        <h1>Operators Example in JavaScript</h1>
+    </body>
+    <script>
+        /*
+            1. Arithmetic Operators : +, -, *, /, %
+            2. Relational Operators : >, <, >=, <=, ==, !=
+            3. Logical Operators : &&, ||, !
+            4. unary operator : ++, -- ( pre and post fix )
+        */
+        // + : arithmetic operator, addition 
+        // + : concatenation operator, string concatenation
+        let a = 20;
+        let b = 21;
+        let c = a % b;
+        let d = a !== b; //20 != 20
+        // == : value check, type ignore
+        // === : both value and type check
+        
+        console.log("The value of c is : " + c);
+        console.log("The value of d is :  "+d);
+        let e = 10;
+        //console.log (e++); // 10 : console.log( 10) : post (10+1)
+        console.log (++e); // 10 : 1 +10 : 11 e : console.log(e):
+        console.log(e); // 11
+        let f = 10;
+        f = f++; // f = 10;
+        f = f++; // f = 10;
+        console.log('f ',f);
+        let h = f++; // h = f : 10
+        console.log('h ',h); // 10
+        console.log('f ',f); // 10
+        //f = f++;
+        //f = f++;
+
+        // logical and : && 
+        /*
+                T   T  :  T
+                T   F  :  F
+                F   T  :  F
+                F   F  :  F
+
+        */
+       // logical or : || 
+        /*
+                T   T  :  T
+                T   F  :  T
+                F   T  :  T
+                F   F  :  F
+
+        */
+       let g = 10 < 5 && 5 < 8 || 6 < 8 || 8 < 10;
+       //         F   &&   T || T || T
+       console.log('g ',g);
+       //
+        
+
+
+    </script>
+</html>

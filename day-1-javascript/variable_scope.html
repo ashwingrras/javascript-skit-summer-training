@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Variable Scope</title>       
+    </head>
+    <body>
+        <h1>Variable Scope in JavaScript</h1>
+    </body>
+    <script>
+
+        // sum function to add two numbers
+        function sum(a, b) {
+            return a + b;
+        }
+
+        var a = 10;
+        var b = 10;
+        var c = sum(a, b); // a + b;
+        console.log("The value of c is : " + c);
+        var d = sum(19,11); // 19 + 11
+        console.log("The value of d is : " + d);
+
+        //var x = 5; // global variable
+        //let y = 7; // global variable
+        var age = 18;
+        function testScope()
+        {
+            //x = 10;
+            console.log("The value of x inside the function is : " + x);
+            var x = 20; // local variable
+            console.log("The value of x inside the function is : " + x);
+            //y = 30; // not allowed to access the global variable y inside the function because it is declared with let
+            //console.log("The value of y inside the function is : " + y);
+            let y = 40; // local variable
+            console.log("The value of y inside the function is : " + y);
+            age = 20; // global variable
+            console.log("The value of age inside the function is : " + age);
+            var age = 25; // local variable
+            console.log("The value of age inside the function is : " + age);
+        }
+
+        testScope();
+        console.log("The value of age is : " + age);
+        console.log("The value of x is : " + x);
+        console.log("The value of y is : " + y);
+        
+        // testVarScope();, var class = "1" // global, 
+        // inside function class = "3"; var class = "2" // local, console.log(class) // 2, console.log(window.class) // 1
+
+        var year = "1st"; // global variable
+        function testVarScope()
+        {
+                //year = "2nd"; // local variable
+                console.log("The value of year inside the function is : " + year);
+                var year = "3rd"; // local variable
+                console.log("The value of year inside the function is : " + year);
+        }
+        testVarScope();
+        console.log("The value of year is : " + year);// global variable
+
+    </script>
+</html>

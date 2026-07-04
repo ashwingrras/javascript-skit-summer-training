@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Array Example</title>
+    </head>
+
+    <body>
+        <h1>Array Example</h1>
+    </body>
+    <script>
+
+        var val1 = [1,2,3]; // integar array
+        var val2 = 2;
+        var val3 = "a";
+        var val4 = "b";
+        var val5 = true;
+
+        var arr = [1, 2, 3, 4, 5, "a","b", true, 19.76, 12.05]; // mixed type array
+       console.log('arr : ',arr);  
+        // index starts from 0
+        // // undefined, null 
+        console.log('arr[7] : ',arr[7]); 
+        console.log('arr.length : ',arr.length);
+        arr[7]= false; // index 7 value is changed to false
+        console.log('arr[7] after change : ',arr[7]);
+        // want to add new value as : 98
+        arr.push(98); // add new value at the end of array
+        console.log('arr after push : ',arr); 
+        arr.pop(); // remove last value from array
+        console.log('arr after pop : ',arr);
+        arr.unshift(98); // add new value at the start of array
+        console.log('arr after unshift : ',arr);
+        arr.shift(); // remove first value from array
+        console.log('arr after shift : ',arr);
+        // want to add new value as : 98 at index 2
+        arr[0] = "abcd"; // add new value at index 0
+        console.log('arr after adding new value at index 0 : ',arr);
+        arr[12] = "xyz"; // add new value at index 12
+        console.log('arr after adding new value at index 12 : ',arr);
+        console.log(arr[10]);
+
+
+    </script>
+
+</html>

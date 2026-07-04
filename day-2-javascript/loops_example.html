@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>Loops Example</title>    
+    </head>
+    <body>
+        <h1>Loops Example</h1>  
+    </body>
+    <script>
+        var n = 5;
+        // loops: for, while, do while, for in, for of, forEach
+        let arr = [1, 4, 5, 2, 6, 7];
+        let sum = arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5];
+        console.log("Sum of array elements: " + sum);
+        // for(initialization; condition; increment/decrement)
+        console.log('before for loop');
+        // for loop
+        let i = 0;
+        // step 1 :initialization
+        // step 2 : condition check
+        // step 3 : execute the code block
+        // step 4 : increment/decrement
+        // step 5 : go to step 2 / condition check
+        for(; i < 6;) // 6 < 6
+        {
+            console.log('Inside for loop: index ' + i +' value: ' + arr[i]);
+            i++;
+        }
+        console.log('after for loop');
+        console.log('before second for loop');
+        for(i=0; i < 6;i++) // 6 < 6
+        {
+            console.log('Inside for loop: index ' + i +' value: ' + arr[i]);
+        }
+        console.log('after second for loop');
+
+
+        ////////// while loop:  while(condition) { code block }
+        let arr1 = [6, 3, 1, 7, 2, 9];
+        console.log('before while loop');
+        i = 0;
+        while(i < 6) // condition
+        {
+            console.log('Inside while loop: index ' + i +' value: ' + arr1[i]);
+            i++; // increment
+        }
+        console.log('after while loop');
+
+        let arr2 = [5, 3, 1, 7, 2, 9];
+        for(let i = arr2.length - 1; i >= 0; i--) // 6 < 6
+        {
+            console.log('Inside for loop: index ' + (i-1) +' value: ' + arr2[i-1]);
+        }
+
+
+        {
+            console.log('inside block 1');
+            {
+                console.log('inside block 1.1');
+                {
+                    console.log('inside block 1.1.1');
+                }
+            }
+        }
+
+        {
+            console.log('inside block 2');
+        }
+        i = 0;
+        // do while loop
+        do {
+            console.log('Inside do while loop: index ' + i +' value: ' + arr1[i]);
+            i++; // increment
+        } while(i < 6); // condition
+        console.log('after do while loop');
+        i = 0;
+        console.log('before for loop, with semicolon ');
+        let j = 0;
+        for(let j = 0; j < arr2.length; j++);
+        {
+            console.log('Inside for loop with semicolon: index ' + j +' value: ' + arr2[j]);
+        }
+        console.log('after for loop, with semicolon ');
+
+
+        // for in loop
+        let arr3 = [5, 3, 1, 7, 2, 9];
+        for(let index in arr3) // i is index
+        {
+            console.log('Inside for in loop: index ' + index +' value: ' + arr3[index]);
+        }
+        //let k;
+        for(let k in arr3) // k is index
+        {
+            console.log('Inside for in loop with k: index ' + k +' value: ' + arr3[k]);
+        }
+
+        // for of loop
+        for(let value of arr3) // value is the element
+        {
+            console.log('Inside for of loop: value: ' + value);
+        }
+
+        // forEach loop
+        let arr4 = [5, 3, 1, 7, 2, 9];
+        arr4.forEach( function(value, index) {
+            console.log('Inside forEach loop: index ' + index +' value: ' + value);
+        });
+
+    </script>
+
+</html>

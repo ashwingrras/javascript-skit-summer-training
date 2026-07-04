@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>JS Functions Example</title>    
+    </head>
+    <body>
+        <h1>JS Functions Example</h1>  
+    </body>
+    <script>
+
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    console.log('Sum of 5 and 10 is: ' + add(5, 10));
+    // table of
+
+    let inputValue = prompt('Enter a number to print its table:');
+    //inputValue = parseInt(inputValue);
+    inputValue = Number(inputValue);
+    console.log('Table of ', inputValue);
+
+    // 5 : 1, 3, 6, 10, 15, 13, 10, 6, 1
+    // 6 : 1, 3, 6, 10, 15, 21, 19, 16, 12, 7, 1
+
+
+    function printTable(num) 
+    {
+        for (let i = 1; i <= 10; i++) {
+            console.log(num + ' x ' + i + ' = ' + (num * i));
+        }
+    }
+
+    printTable(inputValue);
+
+    // normal function
+    function sum(a, b) {
+        return a + b;
+    }
+
+    // lambda function
+    const sumLambda = (a, b) => a + b;
+    
+    console.log('Sum of 5 and 10 using normal function: ' + sum(5, 10));
+    console.log('Sum of 5 and 10 using lambda function: ' + sumLambda(5, 10));
+
+    // lambda function to calculate square of a number
+    const square = x => x * x;
+    console.log('Square of 5 is: ' + square(5));
+
+    // DOB : 10-10-1992
+    // DOB : 5-7-1995
+
+    // java script object
+
+    let studentName;
+    let studentDOB;
+    let studentAddress;
+    let studentPhone;
+
+    // this is not a valid array syntax
+    //let arr= [name:"roahn", dob:"10-10-1992", address:"jagatpura, jaipur", phone:"1234567890"];
+    // object, key value pair
+    let studentInfo = {
+        name: 'Rohit', // key
+        dob: '10-10-1992',
+        phone: '1234567890',
+        skills:['JavaScript', 'Python', 'Java'], // array inside object
+        addressInfo: { // nested object
+            city: 'Jaipur',
+            state: 'Rajasthan',
+            country: 'India'
+        }
+    };
+    console.log(studentInfo['name']); // 1st way to access object property
+    console.log(studentInfo.name); // 2nd way to access object property
+    studentInfo['name'] = 'Mohit'; // update object property
+    studentInfo.name = 'Mohit'; // update object property
+    console.log(studentInfo);
+    console.log(Object.keys(studentInfo)); // get all keys of object
+
+
+    // array iteration methods
+
+
+
+    </script>
+        
+</html>
