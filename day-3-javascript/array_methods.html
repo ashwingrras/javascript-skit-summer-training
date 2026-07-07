@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Array Methods</title>
+    </head>
+    <body>
+        <!-- <script src="array_methods.js"></script> -->
+        /*
+            some
+            reduce
+            filter
+            forEach
+            map
+
+            find
+            every
+            reduceRight
+
+
+        */
+
+        <script>
+                // arr1= [ 9, 4, 5, 6];
+            let products = [
+                {
+                    id: 1,
+                    name: "Nike Air Max",
+                    price: 1199,
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: {
+                        "S": ["black", "white"],
+                        "M": ["white"],
+                        "L": ["black"],
+                        "XL": ["black", "white"]
+                    }
+                },
+                {
+                    id: 2,
+                    name: "Adidas Ultraboost",
+                    price: 1399,
+                    sizes: ["S", "M", "L", "XL"],
+                    colors: {
+                        "S": ["blue", "white"],
+                        "M": ["blue"],
+                        "L": ["blue", "black"],
+                        "XL": ["black"]
+                    }
+                }
+            ];
+            let firstProduct = products[0];
+            console.log(firstProduct);
+            let userInputSize = prompt("enter your prefered size");
+            let productSizes = firstProduct.sizes;
+            var productFound = false;
+            for(let i=0; i< productSizes.length; i++){
+                console.log("size : ",productSizes[i]);
+                if(userInputSize == productSizes[i])
+                {
+                    productFound = true;
+                    break;    
+                }
+            }
+            console.log("productFound : ",productFound);
+            // some
+            let found = productSizes.some(size => size == userInputSize);
+            console.log("found ",found);
+            // studentResult = [ 50, 98, 34, 90, 76, 19, 30, 45, 14, 33 ]
+            // find fail students: percentage < 33
+            let values = [ 50, 98, 34, 90, 76, 19, 30, 45, 14, 33 ];
+            // find values less than 33
+            // output : [19, 30, 14]
+            let result = [];
+            for(let value of values )
+            {
+                if(value < 33)
+                {
+                  result.push(value);   
+                }
+            }
+            console.log('result ',result);
+            let resultFilter = values.filter(value => value < 33);
+            console.log('resultFilter ',resultFilter);
+            let amount = [ 50, 90, 60, 50, 100, 50 ];
+            // output: sum = 200
+            let sum = 0;
+            for(let value of amount)
+            {
+                sum += value;
+            }
+            console.log("sum : ",sum);
+            //let sumReduce = amount.reduce(value => value + value);
+            console.log('amount array ',amount);
+            let sumReduce = amount.reduce((acc, value) => 
+            {
+                console.log('acc ',acc);
+                console.log('value ',value); 
+                return acc + value;// + value;
+            });
+            console.log('sumReduce : ',sumReduce);
+            console.log("amount array before forEach ",amount);
+            let amountForEach = amount.forEach((value, index) =>
+            {
+                   return value + value;
+            });
+            console.log("amount array after forEach ",amount);
+            console.log('amountForEach ',amountForEach);
+
+            // find
+            let data = [10, 45, 34, 45]; // find: value > 30 && value < 40
+            // output : 34
+            let findFirst = undefined;
+            for(let value of data)
+            {
+                if(value > 30 && value < 40)
+                {
+                 findFirst = value;
+                 break;   
+                }
+            }
+            console.log('findFirst ',findFirst);
+            // find last
+            let dataLast = [10, 45, 34, 45, 89, 32, 76, 48]; // find last: value > 30 && value < 40 
+            // output: 32
+            let findLast = undefined;
+            for(let value of dataLast)
+            {
+                if(value > 30 && value < 40)
+                {
+                 findLast = value;
+                }
+            }
+            console.log('findLast ',findLast);
+
+        </script>
+    </body>
+</html>
