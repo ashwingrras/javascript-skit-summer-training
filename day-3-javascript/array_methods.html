@@ -130,6 +130,59 @@
             }
             console.log('findLast ',findLast);
 
+            // to check all values valid
+            let arr2 = [9, 10, 15, 20, 12, 26];
+            // check all values even, all even: true, found any odd : false
+            let allEven = true;
+            for(let value of arr2)
+            {
+                if(value % 2 !== 0)
+                {
+                  allEven = false;
+                  break;
+                }
+            }
+            console.log('allEven',allEven);
+            //
+            let evenEvery = arr2.every(num => num % 2 == 0);
+            console.log('evenEvery ',evenEvery)
+            console.log('date start ', new Date());
+            for(let i = 0; i < 90000; i++)
+            {
+
+            }
+            console.log('date end ', new Date());
+
+            const numbers = [1, 2, 3];
+
+            const resultFlatMap = numbers.flatMap(num => [num, num * 3]);
+
+            console.log('resultFlatMap ',resultFlatMap);
+            // [1, 2, 2, 4, 3, 6]
+
+            let arrVal = [ 3, 5, 7];
+            console.log('arrVal ',arrVal);
+            // arr1 = [ 3, 5, 7]
+            // [ 9, 25, 49]
+            // output: [3, 9, 5, 25, 7, 49]
+            let arrFlat = [];
+            for(let value of arrVal)
+            {
+                arrFlat.push(value);
+                arrFlat.push(value*value)
+            }
+            console.log('arrFlat',arrFlat);
+
+            let fruits = ["apple","banana","orange"];
+            const [index, value] = fruits.entries();
+            //console.log('index',index,' value ',value);
+
+            let students = ['aman', 'rohan'];
+            console.log('students ',students);
+            students = [... students, 'mohit'];
+            console.log('students ',students);
+
+
         </script>
     </body>
 </html>
