@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Student Information System</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Student Information System</h1>
+    <div class="controls">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Student Name">
+
+        <input
+            type="text"
+            id="roll"
+            placeholder="Roll Number">
+
+        <input
+            type="number"
+            id="m1"
+            placeholder="Subject 1 Marks">
+
+        <input
+            type="number"
+            id="m2"
+            placeholder="Subject 2 Marks">
+
+        <input
+            type="number"
+            id="m3"
+            placeholder="Subject 3 Marks">
+
+        <button id="save">
+            Add Student
+        </button>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Student">
+
+    </div>
+
+    <!-- Statistics -->
+    <div id="stats">
+
+    </div>
+
+    <!-- Student Table -->
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Roll No</th>
+
+                <th>Name</th>
+
+                <th>Total Marks</th>
+
+                <th>Average</th>
+
+                <th>Grade</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="tbody">
+
+            <!-- Students will be added dynamically -->
+
+        </tbody>
+
+    </table>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
