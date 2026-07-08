@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>DOM</title>
+</head>
+<body>
+        <h1 id="h1_1" class="h1_1"> Hello Friend 1 </h1>
+        <h1 id="h1_2" class="h1_1" > Hello Friend 2 </h1>
+        <H1 id="h1_3" class="h1_1"> Hello Friend 3 </H1>
+        <h1 id="h1_4" class="h1_1"> Hello Friend 4 </h1>
+
+        <input type="button" value="test" onclick="handleButtonClick()"> change </body>
+
+        <a href="about.html"> About </a>
+        <div>
+                <ol id="ol_fruits">
+                    <li class="li_fruit">Apple</li>
+                    <li class="li_fruit">Mango</li>
+                    <li class="li_fruit">Orange</li>
+                </ol>
+        </div>
+</body>
+<script>
+
+    //document.getElementById("h1_2").innerHTML = "updated h1_2"
+    // 
+    function handleButtonClick()
+    {
+        //document.getElementById("h1_1").textContent = "updated h1_1";
+        console.log('getElementById ', document.getElementById("h1_1"));
+        console.log('getElementsByClassName ', document.getElementsByClassName("h1_1"));
+        document.getElementsByClassName("h1_1")[3].textContent = "all changed";
+        for(let i = 0; i < document.getElementsByClassName("h1_1").length; i++)
+        {
+            document.getElementsByClassName("h1_1")[i].textContent = "all changed";   
+        }
+        console.log('getElementById ol_fruits ', document.getElementById("ol_fruits"));
+        
+        console.log('getElementsByTagName', document.getElementsByTagName("li"));
+        document.getElementsByTagName("li")[0].innerText = "APPLE";
+
+        document.getElementsByClassName("li_fruit")[2].innerText = "ORANGE";
+    }
+
+</script>
+
+</html>
